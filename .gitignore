@@ -1,0 +1,28 @@
+# .claude runtime / session data are ignored by default.
+# This repo only tracks portable configuration.
+
+# Ignore everything at the top level
+/*
+
+# --- Tracked config files ---
+!/.gitignore
+!/README.md
+!/CLAUDE.md
+!/settings.json
+!/settings.local.json
+!/setup.sh
+!/statusline-command.sh
+!/statusline-node.js
+!/statusline-config.json
+
+# --- Tracked config directories ---
+!/commands/
+!/hooks/
+!/memory/
+!/skills/
+!/sounds/
+
+# --- Generated caches inside tracked directories ---
+__pycache__/
+*.pyc
+*.pyo

@@ -1,0 +1,7 @@
+- [用户画像](user-profile.md) — 身份、技术背景、开发环境、意向方向、沟通偏好
+- [经验总结准则](feedback-experience-summary.md) — 复杂任务后提炼抽象、通用、可复用的知识
+- [个性化回答前先查背景](feedback-contextualize-before-answering.md) — 避免泛化模板回答，必须在回答前检查用户已知背景
+- [Claude Code 弹窗提示音](claude-code-permission-sound.md) — 权限弹窗提醒须用 PermissionRequest hook（Notification/permission_prompt 不触发），跨平台实现于 ~/.claude/hooks/notify.js
+- [MCP 打包注册偏好](mcp-packaging-preference.md) — Python MCP 用 uvx+git 源启动、密钥经 --env + ${VAR} 展开注入，配置零明文零路径
+- [MCP 配置同步工作流](mcp-config-sync-workflow.md) — ~/.claude/mcp.json 为唯一权威；setupMCPs.sh(Claude)/setupMCPs.dsh.sh(dsh) 全量同步，enable 开关、cmdWrap 由安装器判定、Claude 侧权限名须匹配实际注册名
+- [statusline 的 Model 名解析](claude-code-statusline-model-name.md) — statusline 不认 `_NAME` 变量，第三方模型要在 ~/.claude/statusline-*.js/.sh 里按 model.id 自行解析显示名

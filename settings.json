@@ -1,0 +1,113 @@
+{
+  "autoUpdatesChannel": "latest",
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": "deepseek-v4-flash-vision-exp[1M]",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL_NAME": "deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek-v4-flash-vision-exp[1M]",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL_NAME": "deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek-v4-flash-vision-exp[1M]",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL_NAME": "deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek-v4-flash-vision-exp[1M]",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL_NAME": "deepseek-v4-flash"
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "command": "node ~/.claude/hooks/notify.js",
+            "timeout": 15,
+            "type": "command"
+          }
+        ],
+        "matcher": "idle_prompt"
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "command": "node ~/.claude/hooks/notify.js",
+            "timeout": 15,
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ]
+  },
+  "model": "haiku",
+  "permissions": {
+    "allow": [
+      "Bash",
+      "PowerShell",
+      "WebSearch",
+      "WebFetch",
+      "Edit",
+      "MultiEdit",
+      "mcp__A800__run-whitelisted-command"
+    ],
+    "ask": [
+      "Bash(git reset --hard *)",
+      "PowerShell(git reset --hard *)",
+      "Bash(git push --force *)",
+      "PowerShell(git push --force *)",
+      "Bash(git push -f *)",
+      "PowerShell(git push -f *)",
+      "Bash(git clean -f*)",
+      "PowerShell(git clean -f*)",
+      "Bash(git checkout -- *)",
+      "PowerShell(git checkout -- *)",
+      "Bash(git restore *)",
+      "PowerShell(git restore *)",
+      "Bash(git stash clear *)",
+      "PowerShell(git stash clear *)",
+      "Bash(git stash drop *)",
+      "PowerShell(git stash drop *)",
+      "Bash(git branch -D *)",
+      "PowerShell(git branch -D *)",
+      "Bash(git push --delete *)",
+      "PowerShell(git push --delete *)",
+      "Bash(git tag -d *)",
+      "PowerShell(git tag -d *)",
+      "Bash(git filter-branch *)",
+      "PowerShell(git filter-branch *)",
+      "Bash(rm -rf *)",
+      "Bash(rm -r *)",
+      "Bash(rm -f *)",
+      "PowerShell(Remove-Item -Recurse -Force *)",
+      "PowerShell(Remove-Item -Force *)",
+      "PowerShell(Remove-Item -Recurse *)",
+      "PowerShell(rm -rf *)",
+      "Bash(docker system prune *)",
+      "PowerShell(docker system prune *)",
+      "Bash(docker volume rm *)",
+      "PowerShell(docker volume rm *)",
+      "Bash(docker compose down -v *)",
+      "PowerShell(docker compose down -v *)",
+      "Bash(docker-compose down -v *)",
+      "PowerShell(docker-compose down -v *)",
+      "Bash(cargo publish *)",
+      "PowerShell(cargo publish *)",
+      "Bash(npm publish *)",
+      "PowerShell(npm publish *)",
+      "Bash(npm unpublish *)",
+      "PowerShell(npm unpublish *)",
+      "Bash(gh repo delete *)",
+      "PowerShell(gh repo delete *)",
+      "Bash(gh release delete *)",
+      "PowerShell(gh release delete *)",
+      "Bash(gh api --method DELETE *)",
+      "PowerShell(gh api --method DELETE *)",
+      "Bash(gh api -X DELETE *)",
+      "PowerShell(gh api -X DELETE *)"
+    ],
+    "defaultMode": "auto"
+  },
+  "skipWebFetchPreflight": true,
+  "statusLine": {
+    "command": "~/.claude/statusline-command.sh",
+    "type": "command"
+  }
+}
