@@ -7,13 +7,13 @@
 | 内容 | 说明 |
 |---|---|
 | `settings.json` | 主配置(hooks / env / permissions / statusLine) |
-| `CLAUDE.md` `克劳德.md` | 全局指令 |
+| `CLAUDE.md` | 全局指令 |
 | `hooks/notify.js` | 提示音 hook,纯 Node.js,跨平台 |
 | `sounds/{ask,wait}/` | 提示音(爱莉希雅语音) |
 | `memory/` | 全局记忆,**跨机器唯一来源** |
 | `skills/` `commands/` | 技能与自定义命令 |
 | `statusline-command.sh` `statusline-node.js` | 状态栏(已跨平台) |
-| `setupMCPs.sh` | 新机器安装 MCP 依赖 |
+| `setup.sh` | 新机器安装 MCP 依赖 |
 | `README.md` | 本说明 |
 
 ## 换机器步骤
